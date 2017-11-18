@@ -107,6 +107,7 @@ def updateDeltaCenter(matrixCenter, matrixSample, t):
     return matrixUpdate
                            
         
+        
 
 
 
