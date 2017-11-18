@@ -13,9 +13,7 @@ from numpy.linalg import norm
 import random
 
 #--------------------------------Analysis--------------------------------------
-
-
-#read into a matrix
+##read into a matrix
 def zp2matrix():
     matrix = []
     count = 0 #about 4,600,000 line
@@ -36,13 +34,14 @@ def zp2matrix():
     return matrix, count
 
 
-#randomized centroid initialization
+##randomized centroid initialization
 def initRandom(matrix, k):
     return random.sample(matrix, k)
     #return np.vstack(random.sample(matrix, 3))
     #np.matrix(s)
 
-#k-means++ initialization
+
+##k-means++ initialization
 def initKMeans(matrix, k):
     #Sample first center uniformly 
     matrixCenter = random.sample(matrix, 1)
@@ -87,7 +86,7 @@ def minDistance(matrixCenter, sample):
     #return pow(d, 2), index
 
 
-#Mini-batch k-means
+##Mini-batch k-means
 def onlineKMeans(matrixCenter, matrix, T):
     #list of array
     #matrixCenter = np.matrix(matrixCenter)
